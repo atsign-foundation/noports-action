@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest # or ubuntu-24.04-arm
     steps:
       - name: Install NoPorts
-        uses: atsign-foundation/noports-action@v1.0.0
+        uses: atsign-foundation/noports-action@v1.0.1
           
       - name: Run a command
         run: sshnp --help
@@ -61,7 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup NoPorts and Authentication
-        uses: atsign-foundation/noports-action@v1.0.0
+        uses: atsign-foundation/noports-action@v1.0.1
         with:
           version: 'v5.14.2' # Optional: defaults to latest
           atsign: '@alice'
@@ -78,15 +78,19 @@ jobs:
 
 ## Version History
 
+### v1.0.1
+
+* Fixed version check for more recent NoPorts.
+
 ### v1.0.0
 
-* Production ready
-* Example updated to show npt running in the background for subsequent steps
+* Production ready.
+* Example updated to show npt running in the background for subsequent steps.
 
 ### v0.0.2
 
-* ' instead of " for passing atKeys file from input to file
-* Correct flag for relay in advanced example
+* ' instead of " for passing atKeys file from input to file.
+* Correct flag for relay in advanced example.
 
 ### v0.0.1
 
