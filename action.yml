@@ -61,7 +61,7 @@ runs:
       shell: bash
       run: |
         echo "NoPorts installed successfully at ${{ inputs.install-dir }}"
-        sshnp --help 2>&1 | grep --color=never Version
+        sshnp --version 2>/dev/null || sshnp --help 2>&1 | grep --color=never Version
 
     - name: Configure atKeys
       if: ${{ inputs.atkeys-secret != '' && inputs.atsign != '' }}
